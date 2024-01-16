@@ -26,6 +26,14 @@
   --border-size: 3px;
   --max-paragraph-size: 75ch;
 }
+a:hover,
+a:focus {
+  transform: scale(1.2);
+  transition: transform 0.1s ease-in-out;
+}
+a {
+  transition: transform 0.1s ease-in-out;
+}
 body {
   min-height: 100dvh;
   background-color: var(--background-color);
@@ -78,6 +86,7 @@ header {
     }
   }
 }
+
 main {
   padding: 0 var(--padding);
   .projects-container {
@@ -119,6 +128,7 @@ main {
   }
 }
 footer {
+  border-top: 0.5rem solid var(--secondary-color);
   background-color: var(--principal-color);
   padding: var(--padding);
 }
@@ -170,6 +180,7 @@ p {
       align-items: start;
       box-shadow: var(--shadow);
       padding: var(--padding);
+      border-right: 0.5rem solid var(--secondary-color);
     }
     .icons-container {
       display: none;
@@ -186,18 +197,18 @@ p {
       margin: 3rem;
     }
     .picture {
-      height: 400px;
-      width: 400px;
+      height: 350px;
+      width: 350px;
       position: relative;
     }
     .about-me {
       position: relative;
-      height: 300px;
+      min-height: 200px;
       align-content: center;
       display: grid;
       .icons-container {
         display: flex;
-        position: absolute;
+        justify-self: end;
         right: var(--margin);
         bottom: var(--margin);
         gap: 1rem;
@@ -218,7 +229,7 @@ p {
   }
 }
 
-@media (min-width: 650px) and (max-width: 950px) {
+@media (min-width: 650px) and (max-width: 949px) {
   header {
     padding: 2rem;
     .container {
